@@ -1,0 +1,281 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* MARGES EN PADDING */
+.mt-7{
+    margin-top: 100px; /* Bovenmarge instellen op 100px */
+}
+.top-20 {
+    top: 40% !important; /* Positie bovenaan ingesteld op 40% */
+}
+
+/* LETTERTYPE */
+@font-face {
+    font-family: raleway-bold;
+    src: url('../font/Raleway-Bold.ttf');
+}
+@font-face {
+    font-family: raleway-extra-bold;
+    src: url('../font/Raleway-ExtraBold.ttf');
+}
+@font-face {
+    font-family: questrial-regular;
+    src: url('../font/Questrial-Regular.ttf');
+}
+.font-primary{
+    font-family:raleway-bold; /* Primair lettertype */
+}
+.font-secondary {
+    font-family: questrial-regular; /* Secundair lettertype */
+}
+.font-tertiary {
+    font-family: raleway-extra-bold; /* Derde lettertype */
+}
+
+/* KLEUREN */
+.text-primary{
+    color: #555555 !important; /* Primaire tekstkleur */
+}
+.text-secondary{
+    color: #909090; /* Secundaire tekstkleur */
+}
+.text-tertiary{
+    color: #343434; /* Tertiaire tekstkleur */
+}
+.text-quaternary{
+    color: #b8cd06; /* Vierde tekstkleur */
+}
+.bg-green{
+    background-color: #b8cd06; /* Groene achtergrondkleur */
+}
+.bg-dark{
+    background-color: #2c2c2c; /* Donkere achtergrondkleur */
+}
+.bg-gray{
+    background-color: #909090; /* Grijze achtergrondkleur */
+}
+.bg-gray2{
+    background-color: #2c2c2c; /* Tweede grijze achtergrondkleur */
+}
+.bg-c1{
+    background-color: #a7f050; /* Kleur voor C1 */
+}
+.bg-c2{
+    background-color: #50e3f0; /* Kleur voor C2 */
+}
+.bg-c3{
+    background-color: #edb82c; /* Kleur voor C3 */
+}
+.bg-c4{
+    background-color: #7d3f99; /* Kleur voor C4 */
+}
+.bg-c5{
+    background-color: #3481c7; /* Kleur voor C5 */
+}
+.bg-c6{
+    background-color: #bf584b; /* Kleur voor C6 */
+}
+.border-tertiary{
+    border-color: #343434 !important; /* Randkleur voor tertiaire elementen */
+}
+.border-c1{
+    border-color: #a7f050 !important; /* Randkleur voor C1 */
+}
+.border-c2{
+    border-color: #50e3f0 !important; /* Randkleur voor C2 */
+}
+.border-c3{
+    border-color: #edb82c !important; /* Randkleur voor C3 */
+}
+.border-c4{
+    border-color: #7d3f99 !important; /* Randkleur voor C4 */
+}
+.border-c5{
+    border-color: #3481c7 !important; /* Randkleur voor C5 */
+}
+.border-c6{
+    border-color: #bf584b !important; /* Randkleur voor C6 */
+}
+
+/* LETTERGROOTTE */
+.fs-10{
+    font-size: 10px; /* Lettergrootte instellen op 10px */
+}
+.fs-11{
+    font-size: 11px; /* Lettergrootte instellen op 11px */
+}
+.fs-13{
+    font-size: 13px; /* Lettergrootte instellen op 13px */
+}
+.fs-14{
+    font-size: 14px; /* Lettergrootte instellen op 14px */
+}
+.fs-16{
+    font-size: 16px; /* Lettergrootte instellen op 16px */
+}
+.fs-18{
+    font-size: 18px; /* Lettergrootte instellen op 18px */
+}
+
+/* MENU1 */
+#menu1 a:hover{
+    color: #b8cd06 !important; /* Hover-effect voor links */
+}
+.bi-heart:hover{
+    color: #b8cd06 !important; /* Hover-effect voor links */
+}
+
+/* MENU2 */
+#menu2 .nav-link:hover{
+    color: #ffffff;
+    background-color: #b8cd06; /* Hover-effect voor menu-items */
+}
+
+/* ACCORDION */
+#categories button:hover{
+    color: #b8cd06 !important; /* Hover-effect voor accordion knoppen */
+}
+#categories-sm button:hover{
+    color: #b8cd06 !important; /* Hover-effect voor kleine accordion knoppen */
+}
+
+/* CAROUSEL */
+.carousel-inner img {
+    height: 300px; /* Stel de hoogte in voor de carrouselafbeeldingen */
+    object-fit: contain; /* Behoud de verhoudingen en toon de volledige afbeelding */
+    width: 100%; /* Vul de beschikbare breedte in */
+}
+.carousel-item {
+    height: 300px; /* Stel de hoogte in voor elk carrousel-item */
+}
+.carousel-indicators button {
+    margin: 0 8px !important; /* Pas de marge aan voor de carrousel-indicatoren */
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50% !important;
+    border : solid 1px !important;
+    border-color: #909090 !important; /* Grijze randkleur voor de indicatoren */
+    background-color: transparent !important;
+    transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease !important; /* Voeg een zachte overgang toe voor de grootte */
+}
+.carousel-indicators button:hover {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50% !important;
+    border : solid 2px !important;
+    border-color: #b8cd06  !important;
+    background-color: transparent !important;
+}
+
+/* SLIDER */
+.slider-container {
+    position: relative;
+    width: 200px;
+    height: 4px;
+    background-color: #ddd;
+    border-radius: 5px; /* Voeg afgeronde hoeken toe aan de slider */
+}
+.slider-bar {
+    position: absolute;
+    height: 4px;
+    background-color: #b8cd06;
+    border-radius: 5px;
+    left: 25%; /* Stel de linkerpositie in */
+    right: 25%; /* Stel de rechterpositie in */
+}
+.slider-thumb {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border: 2px solid #b8cd06;
+    border-radius: 20%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Centreer de schuifknop */
+}
+.slider-thumb.left {
+    left: 25%; /* Plaats de linkerknop op 25% */
+}
+.slider-thumb.right {
+    right: 25%; /* Plaats de rechterknop op 25% */
+    transform: translate(50%, -50%); /* Centreer de rechterknop */
+}
+
+/* KLEURKLASSEN VOOR INSTELLINGEN */
+.color-pere{
+    width: 20px;
+    height: 20px;
+    border: solid 1px; /* Voeg een rand toe aan de kleurvakken */
+}
+.color-fils{
+    width: 14px;
+    height: 14px;
+    z-index:100;
+}
+.color-pere:hover{
+    visibility: visible !important;
+    cursor: pointer; /* Maak de kleurvakken zichtbaar bij hover */
+}
+
+/* PAGINERING */
+.page{
+    height: 35px;
+    width: 35px;
+    padding: 10px 15px; /* Voeg padding toe aan de pagineringknoppen */
+}
+.pagination-button:hover{
+    color: #ffffff !important;
+    background-color: #b8cd06 !important;
+    border-color:#b8cd06 !important; /* Hover-effect voor pagineringknoppen */
+}
+
+/* TRENDS */
+.product-image{
+    height: 100px !important;
+    width: 100px !important; /* Beperk de grootte van productafbeeldingen */
+}
+
+/* NIEUWSBRIEF */
+.no-outline {
+    outline: none;
+    box-shadow: none; /* Verwijder de schaduw en rand van knoppen zonder outline */
+}
+.no-outline:focus {
+    outline: none;
+    box-shadow: none; /* Verwijder de focus-schaduw en rand */
+}
+#newsletterform button:hover{
+    color: #b8cd06 !important; /* Hover-effect voor nieuwsbriefknop */
+}
+input::placeholder {
+    color: #ffffff;
+    font-size: 14px; /* Lettergrootte van de placeholder tekst */
+    font-family:questrial-regular ;
+}
+
+/* SOCIAL ICONEN */
+.icon{
+    width: 35px !important;
+    height: 35px !important;
+    border-radius: 50% !important; /* Maak de social media-iconen rond */
+}
+.icon:hover{
+    background-color: #b8cd06; /* Voeg een hover-effect toe aan de social media-iconen */
+}
+
+/* BETALINGSICONEN */
+.payement{
+    height: 20px !important; /* Beperk de hoogte van betalingsiconen */
+}
+
+@media (max-width: 576px) {
+    #menu1 .border {
+        border: none !important; /* Verwijder de rand op kleinere schermen */
+    }
+    #cards .col-12{
+        border: none !important; /* Verwijder de rand van kaarten op kleine schermen */
+    }
+}

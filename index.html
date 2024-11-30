@@ -1,13 +1,1322 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EXZO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<h1>autotest3</h1>
+<header id="menu" class="container-fluid d-flex flex-column">
+    <!-- Eerste sectie van het menu -->
+    <section id="menu1" class="row order-2 order-lg-1 text-center text-lg-start text-uppercase">
+        <div class="d-lg-flex align-items-center justify-content-between px-lg-5">
+            <!-- Contact sectie, met telefoonnummer en email -->
+            <div id="contact" class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-center mb-3 mb-lg-0">
+                <!-- Telefoonnummer link -->
+                <a class="text-decoration-none px-lg-4 py-lg-3 border border-top-0 border-bottom-0" href="tel:+35235551238745">
+                    <span class="text-primary font-primary fs-10">Contact us:</span>
+                    <span class="text-secondary font-secondary fs-10">+3 (523) 555 123 8745</span>
+                </a>
+                <!-- Email link -->
+                <a class="text-decoration-none px-lg-4 py-lg-3 border border-top-0 border-bottom-0 border-start-0" href="mailto:office@exzo.com">
+                    <span class="text-primary font-primary fs-10">Email:</span>
+                    <span class="text-secondary font-secondary fs-10">office@exzo.com</span>
+                </a>
+            </div>
+            <!-- Login, registratie en taalkeuze sectie -->
+            <div id="reste" class="d-flex flex-column flex-lg-row align-items-center  h-100">
+                <div class="d-flex justify-content-center align-items-center border border-top-0 border-bottom-0 border-end-0 h-100 px-lg-4">
+                    <!-- Login link -->
+                    <a href="#" class="text-decoration-none text-primary font-primary fs-10">Login</a>
+                    <p class="mb-0 text-secondary font-secondary fs-10 px-2">or</p>
+                    <!-- Registratie link -->
+                    <a href="#" class="text-decoration-none text-primary font-primary fs-10">Register</a>
+                </div>
+
+                <!-- Taalkeuze dropdown -->
+                <div class="nav-item dropdown px-lg-4 py-lg-3 border border border-top-0 border-bottom-0 border-end-0 h-100 d-flex align-items-center">
+                    <a class="nav-link dropdown-toggle text-primary font-primary fs-10" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        EN
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item text-primary font-primary fs-10" href="#">EN</a></li>
+                        <li><a class="dropdown-item text-primary font-primary fs-10" href="#">NL</a></li>
+                        <li><a class="dropdown-item text-primary font-primary fs-10" href="#">FR</a></li>
+                    </ul>
+                </div>
+                <!-- Favorieten icoon -->
+                <a class="d-flex align-items-center justify-content-center px-lg-4 py-lg-1 border border border-top-0 border-bottom-0 border-end-0 h-100" href="#">
+                    <i class="bi bi-heart fs-5 text-primary font-primary"></i>
+                </a>
+                <!-- Winkelmandje sectie -->
+                <div class="d-flex align-items-center justify-content-center px-lg-4 py-lg-1 border border border-top-0 border-bottom-0 h-100">
+                    <!-- Winkelmandje link en het aantal producten -->
+                    <a class="text-primary font-primary fs-10 text-decoration-none" href="#">Your bag</a>
+                    <i class="bi bi-handbag position-relative fs-5 ms-2">
+                        <!-- Aantal producten in het winkelmandje -->
+                        <span class="position-absolute start-100 translate-middle rounded-circle bg-green font-secondary text-secondary text-white fs-10" style="top: 5px; padding: 2px 6px; line-height: 1.2;">5</span>
+                    </i>
+                    <!-- Totale prijs van de winkelmand -->
+                    <span class="text-quaternary font-secondary fs-10 ms-2 ">$1195.00</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Tweede sectie van het menu met de navigatie -->
+    <section id="menu2" class="row order-1 order-lg-2 border border-start-0 border-end-0 py-lg-3">
+        <nav class="navbar navbar-expand-lg text-uppercase p-lg-0">
+            <div class="container-fluid font-primary fs-11 px-lg-5">
+                <!-- Logo van de website -->
+                <h1>
+                    <a class="navbar-brand border border-3 border-tertiary  px-2 py-1 font-tertiary text-tertiary d-flex justify-content-center align-items-center" href="#" style="letter-spacing: 3px;">
+                        <span class="fs-16 text-center">ex<br>zo</span>
+                    </a>
+                </h1>
+                <!-- Knop om het menu op mobiele apparaten in te klappen -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Uitgevouwen menu -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-lg-flex justify-align-center align-items-center">
+                        <!-- Navigatielinks -->
+                        <li class="nav-item ">
+                            <a class="nav-link rounded-pill px-3" aria-current="page" href="#">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-3" href="#">about us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-3" href="#">products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-3" href="#">services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-3" href="#">blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-3" href="#">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-3" href="#">products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-3" href="#">pages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-3" href="#">contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- Zoeken icoon -->
+                            <a class="nav-link rounded-pill px-3" href="#"><i class="bi bi-search fs-5"></i></a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+</header>
+<main>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Container van 10 kolommen, met een offset van 1 kolom aan elke kant -->
+            <div class="col-lg-8 offset-lg-2">
+                <div class="row">
+                    <!-- Pad navigatie (breadcrumbs) in hoofdtekst -->
+                    <section id="path" class="text-uppercase p-0 font-secondary text-secondary fs-11 mt-7 mt-lg-4 mb-4 mb-lg-5">
+                        home <i class="bi bi-chevron-right px-1"></i> accessoires <i class="bi bi-chevron-right px-1"></i> gadgets <i class="bi bi-chevron-right px-1"></i> sport gadgets
+                    </section>
+                    <!-- Aside sectie - filter, neemt 3 kolommen in beslag -->
+                    <aside class="col-lg-3 text-uppercase ps-0 pe-lg-4">
+                        <!-- Off-canvas knop, zichtbaar op kleine schermen -->
+                        <button class="btn btn-primary rounded-start-0 rounded-end-5 d-lg-none fs-11 font-primary px-2 position-fixed top-0 start-0 mt-7 bs5" style="z-index: 100" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                            FILTER <i class="bi bi-chevron-right ps-1"></i>
+                        </button>
+                        <!-- Offcanvas - filterpaneel voor mobiele weergave -->
+                        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                            <div class="offcanvas-header">
+                                <h2 class="offcanvas-title font-tertiary text-tertiary fs-14" id="offcanvasExampleLabel">Filter</h2>
+                                <!-- Sluitknop van de offcanvas -->
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <!-- Categorieën sectie in het filterpaneel -->
+                                <section>
+                                    <article id="categories-sm" class="mb-5">
+                                        <h3 class="font-tertiary text-tertiary fs-14">categorieën</h3>
+                                        <div class="accordion accordion-flush" id="accordionFlushExample-sm">
+                                            <!-- Accordion item voor categorieën -->
+                                            <div class="accordion-item">
+                                                <div class="accordion-header">
+                                                    <!-- Knop om de categorie 'Labtops & computers' uit te vouwen -->
+                                                    <button class="accordion-button collapsed px-0 text-uppercase font-primary text-primary fs-11" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse11" aria-expanded="false" aria-controls="flush-collapse11">
+                                                        Labtops & computers
+                                                    </button>
+                                                </div>
+                                                <div id="flush-collapse11" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                                                </div>
+                                            </div>
+                                            <!-- Andere accordion-items voor verschillende productcategorieën -->
+                                            <div class="accordion-item">
+                                                <div class="accordion-header">
+                                                    <button class="accordion-button collapsed px-0 text-uppercase font-primary text-primary fs-11" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse12" aria-expanded="false" aria-controls="flush-collapse12">
+                                                        video & foto camera's
+                                                    </button>
+                                                </div>
+                                                <div id="flush-collapse12" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                                                </div>
+                                            </div>
+                                            <!-- Meer accordion-items voor andere categorieën -->
+                                            <div class="accordion-item">
+                                                <div class="accordion-header">
+                                                    <button class="accordion-button collapsed px-0 text-uppercase font-primary text-primary fs-11" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse13" aria-expanded="false" aria-controls="flush-collapse13">
+                                                        smartphones
+                                                    </button>
+                                                </div>
+                                                <div id="flush-collapse13" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body.</div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <div class="accordion-header">
+                                                    <button class="accordion-button collapsed px-0 text-uppercase font-primary text-primary fs-11" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse14" aria-expanded="false" aria-controls="flush-collapse14">
+                                                        tv & audio
+                                                    </button>
+                                                </div>
+                                                <div id="flush-collapse14" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body.</div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <div class="accordion-header">
+                                                    <button class="accordion-button collapsed px-0 text-uppercase font-primary text-primary fs-11" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse15" aria-expanded="false" aria-controls="flush-collapse15">
+                                                        gadgets
+                                                    </button>
+                                                </div>
+                                                <div id="flush-collapse15" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body.</div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <div class="accordion-header">
+                                                    <button class="accordion-button collapsed px-0 text-uppercase font-primary text-primary fs-11" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse16" aria-expanded="false" aria-controls="flush-collapse16">
+                                                        car electronics
+                                                    </button>
+                                                </div>
+                                                <div id="flush-collapse16" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body.</div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <div class="accordion-header">
+                                                    <button class="accordion-button collapsed px-0 text-uppercase font-primary text-primary fs-11" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse17" aria-expanded="false" aria-controls="flush-collapse17">
+                                                        video games & consoles
+                                                    </button>
+                                                </div>
+                                                <div id="flush-collapse17" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body.</div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <div class="accordion-header">
+                                                    <button class="accordion-button collapsed px-0 text-uppercase font-primary text-primary fs-11" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse18" aria-expanded="false" aria-controls="flush-collapse18">
+                                                        software
+                                                    </button>
+                                                </div>
+                                                <div id="flush-collapse18" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body.</div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <div class="accordion-header">
+                                                    <button class="accordion-button collapsed px-0 text-uppercase font-primary text-primary fs-11" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse19" aria-expanded="false" aria-controls="flush-collapse19">
+                                                        office accessories
+                                                    </button>
+                                                </div>
+                                                <div id="flush-collapse19" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body.</div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <div class="accordion-header">
+                                                    <button class="accordion-button collapsed px-0 text-uppercase font-primary text-primary fs-11" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse20" aria-expanded="false" aria-controls="flush-collapse20">
+                                                        accessories
+                                                    </button>
+                                                </div>
+                                                <div id="flush-collapse20" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <!-- Price Filter Section -->
+                                    <article class="mb-5">
+                                        <h3 class="font-tertiary text-tertiary fs-14 mb-4">price</h3>
+                                        <!-- Slider container to adjust price range -->
+                                        <div class="slider-container mb-3">
+                                            <div class="slider-bar"></div> <!-- Visible part of the slider -->
+                                            <div class="slider-thumb left"></div> <!-- Left thumb for selecting the minimum price -->
+                                            <div class="slider-thumb right"></div> <!-- Right thumb for selecting the maximum price -->
+                                        </div>
+                                        <!-- Display selected price range -->
+                                        <p class="m-0 font-secondary text-secondary fs-11">
+                                            <span class="me-2">price:</span><span>$40</span><span class="mx-1">-</span><span>$300</span>
+                                        </p>
+                                    </article>
+
+                                    <!-- Brand Filter Section -->
+                                    <article class="mb-5">
+                                        <h3 class="font-tertiary text-tertiary fs-14 mb-3">brands</h3>
+                                        <!-- Checkbox filters for selecting brands -->
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="check20">
+                                            <label class="form-check-label font-secondary text-secondary fs-11" for="check20">LG</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="check21">
+                                            <label class="form-check-label font-secondary text-secondary fs-11" for="check21">Samsung</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="check22">
+                                            <label class="form-check-label font-secondary text-secondary fs-11" for="check22">Apple</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="check23">
+                                            <label class="form-check-label font-secondary text-secondary fs-11" for="check23">HTC</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="check24">
+                                            <label class="form-check-label font-secondary text-secondary fs-11" for="check24">Google</label>
+                                        </div>
+                                    </article>
+
+                                    <!-- Color Selection Section -->
+                                    <article class="mb-5">
+                                        <h3 class="font-tertiary text-tertiary fs-14 mb-4">choose color</h3>
+                                        <!-- Color selection buttons -->
+                                        <div class="d-flex align-items-center gap-2">
+                                            <!-- Invisible divs used as borders for color options -->
+                                            <div class="invisible border-c1 color-pere d-flex justify-content-center align-items-center text-center">
+                                                <div class="visible bg-c1 color-fils"></div> <!-- Color option 1 -->
+                                            </div>
+                                            <div class="invisible border-c2 color-pere d-flex justify-content-center align-items-center text-center">
+                                                <div class="visible bg-c2 color-fils"></div> <!-- Color option 2 -->
+                                            </div>
+                                            <div class="invisible border-c3 color-pere d-flex justify-content-center align-items-center text-center">
+                                                <div class="visible bg-c3 color-fils"></div> <!-- Color option 3 -->
+                                            </div>
+                                            <div class="invisible border-c4 color-pere d-flex justify-content-center align-items-center text-center">
+                                                <div class="visible bg-c4 color-fils"></div> <!-- Color option 4 -->
+                                            </div>
+                                            <div class="invisible border-c5 color-pere d-flex justify-content-center align-items-center text-center">
+                                                <div class="visible bg-c5 color-fils"></div> <!-- Color option 5 -->
+                                            </div>
+                                            <div class="invisible border-c6 color-pere d-flex justify-content-center align-items-center text-center">
+                                                <div class="visible bg-c6 color-fils"></div> <!-- Color option 6 -->
+                                            </div>
+                                        </div>
+                                    </article>
+
+                                    <!-- Operation System Filter Section -->
+                                    <article class="mb-5">
+                                        <h3 class="font-tertiary text-tertiary fs-14 mb-3">operation system</h3>
+                                        <!-- Checkbox filters for selecting the operating system -->
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="check30">
+                                            <label class="form-check-label font-secondary text-secondary fs-11" for="check30">Android</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="check31">
+                                            <label class="form-check-label font-secondary text-secondary fs-11" for="check31">iOS</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="check32">
+                                            <label class="form-check-label font-secondary text-secondary fs-11" for="check32">Windows Phone</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="check33">
+                                            <label class="form-check-label font-secondary text-secondary fs-11" for="check33">Symbian</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="check34">
+                                            <label class="form-check-label font-secondary text-secondary fs-11" for="check34">Blackberry OS</label>
+                                        </div>
+                                    </article>
+
+                                    <!-- Popular Tags Section -->
+                                    <article>
+                                        <h3 class="font-tertiary text-tertiary fs-14 mb-4">popular tags</h3>
+                                        <!-- Tags displayed in a flexbox layout -->
+                                        <div class="d-flex flex-wrap gap-2"> <!-- Flexbox parent with wrap option -->
+                                            <!-- Individual tags -->
+                                            <span class="font-tertiary text-secondary fs-10 bg-light p-2 px-3 rounded-pill">headphones</span>
+                                            <span class="font-tertiary text-secondary fs-10 bg-light p-2 px-3 rounded-pill">accessories</span>
+                                            <span class="font-tertiary text-secondary fs-10 bg-light p-2 px-3 rounded-pill">new</span>
+                                            <span class="font-tertiary text-secondary fs-10 bg-light p-2 px-3 rounded-pill">wireless</span>
+                                            <span class="font-tertiary text-secondary fs-10 bg-light p-2 px-3 rounded-pill">cables</span>
+                                            <span class="font-tertiary text-secondary fs-10 bg-light p-2 px-3 rounded-pill">devices</span>
+                                            <span class="font-tertiary text-secondary fs-10 bg-light p-2 px-3 rounded-pill">gadgets</span>
+                                            <span class="font-tertiary text-secondary fs-10 bg-light p-2 px-3 rounded-pill">brands</span>
+                                            <span class="font-tertiary text-secondary fs-10 bg-light p-2 px-3 rounded-pill">replacements</span>
+                                            <span class="font-tertiary text-secondary fs-10 bg-light p-2 px-3 rounded-pill">cases</span>
+                                        </div>
+                                    </article>
+                                </section>
+                            </div>
+                        </div>
+                        <!--settings ecran large-->
+                        <section class="settings d-none d-lg-block">
+                            <!--categories-->
+                            <article id="categories" class=" mb-5">
+                                <h3 class="font-tertiary text-tertiary fs-14">categories</h3>
+                                <div class="accordion accordion-flush" id="accordionFlushExample">
+                                    <!-- Labtops & computers category -->
+                                    <div class="accordion-item">
+                                        <div class="accordion-header">
+                                            <button class="accordion-button collapsed px-0 text-uppercase font-primary text-primary fs-11" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                Labtops & computers
+                                            </button>
+                                        </div>
+                                        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                                        </div>
+                                    </div>
+                                    <!-- Video & photo cameras category -->
+                                    <div class="accordion-item">
+                                        <div class="accordion-header">
+                                            <button class="accordion-button collapsed px-0 text-uppercase font-primary text-primary fs-11" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                video & photo cameras
+                                            </button>
+                                        </div>
+                                        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                                        </div>
+                                    </div>
+                                    <!-- Smartphones category -->
+                                    <div class="accordion-item">
+                                        <div class="accordion-header">
+                                            <button class="accordion-button collapsed px-0 text-uppercase font-primary text-primary fs-11" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                                smartphones
+                                            </button>
+                                        </div>
+                                        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                                        </div>
+                                    </div>
+                                    <!-- TV & audio category -->
+                                    <div class="accordion-item">
+                                        <div class="accordion-header">
+                                            <button class="accordion-button collapsed px-0 text-uppercase font-primary text-primary fs-11" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
+                                                tv & audio
+                                            </button>
+                                        </div>
+                                        <div id="flush-collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                                        </div>
+                                    </div>
+                                    <!-- Gadgets category -->
+                                    <div class="accordion-item">
+                                        <div class="accordion-header">
+                                            <button class="accordion-button collapsed px-0 text-uppercase font-primary text-primary fs-11" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">
+                                                gadgets
+                                            </button>
+                                        </div>
+                                        <div id="flush-collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                                        </div>
+                                    </div>
+                                    <!-- Car electronics category -->
+                                    <div class="accordion-item">
+                                        <div class="accordion-header">
+                                            <button class="accordion-button collapsed px-0 text-uppercase font-primary text-primary fs-11" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapse6">
+                                                car electronics
+                                            </button>
+                                        </div>
+                                        <div id="flush-collapse6" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                                        </div>
+                                    </div>
+                                    <!-- Video games & consoles category -->
+                                    <div class="accordion-item">
+                                        <div class="accordion-header">
+                                            <button class="accordion-button collapsed px-0 text-uppercase font-primary text-primary fs-11" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapse7">
+                                                video games & consoles
+                                            </button>
+                                        </div>
+                                        <div id="flush-collapse7" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                                        </div>
+                                    </div>
+                                    <!-- Software category -->
+                                    <div class="accordion-item">
+                                        <div class="accordion-header">
+                                            <button class="accordion-button collapsed px-0 text-uppercase font-primary text-primary fs-11" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse8" aria-expanded="false" aria-controls="flush-collapse8">
+                                                software
+                                            </button>
+                                        </div>
+                                        <div id="flush-collapse8" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                                        </div>
+                                    </div>
+                                    <!-- Office accessories category -->
+                                    <div class="accordion-item">
+                                        <div class="accordion-header">
+                                            <button class="accordion-button collapsed px-0 text-uppercase font-primary text-primary fs-11" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse9" aria-expanded="false" aria-controls="flush-collapse9">
+                                                offeci accessories
+                                            </button>
+                                        </div>
+                                        <div id="flush-collapse9" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                                        </div>
+                                    </div>
+                                    <!-- Accessories category -->
+                                    <div class="accordion-item">
+                                        <div class="accordion-header">
+                                            <button class="accordion-button collapsed px-0 text-uppercase font-primary text-primary fs-11" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse10" aria-expanded="false" aria-controls="flush-collapse10">
+                                                accessories
+                                            </button>
+                                        </div>
+                                        <div id="flush-collapse10" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- price filter -->
+                            <article class="mb-5">
+                                <h3 class="font-tertiary text-tertiary fs-14 mb-4">price</h3>
+                                <div class="slider-container mb-3">
+                                    <div class="slider-bar"></div>
+                                    <div class="slider-thumb left"></div>
+                                    <div class="slider-thumb right"></div>
+                                </div>
+                                <p class="m-0 font-secondary text-secondary fs-11"><span class="me-2 ">price:</span><span>$40</span><span class="mx-1">-</span><span>$300</span></p>
+                            </article>
+
+                            <!-- brands filter -->
+                            <article class="mb-5">
+                                <h3 class="font-tertiary text-tertiary fs-14 mb-3">brands</h3>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="check7">
+                                    <label class="form-check-label font-secondary text-secondary fs-11" for="check7">
+                                        LG
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="check8">
+                                    <label class="form-check-label font-secondary text-secondary fs-11" for="check8">
+                                        Samsung
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="check9">
+                                    <label class="form-check-label font-secondary text-secondary fs-11" for="check9">
+                                        Apple
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="check10">
+                                    <label class="form-check-label font-secondary text-secondary fs-11" for="check10">
+                                        HTC
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="check11">
+                                    <label class="form-check-label font-secondary text-secondary fs-11" for="check11">
+                                        Google
+                                    </label>
+                                </div>
+                            </article>
+
+                            <!-- color selection -->
+                            <article class="mb-5">
+                                <h3 class="font-tertiary text-tertiary fs-14 mb-4">choose color</h3>
+                                <div class="d-flex gap-2 align-items-center">
+                                    <div class="invisible border-c1 color-pere d-flex justify-content-center align-items-center text-center">
+                                        <div class="visible bg-c1 color-fils"></div>
+                                    </div>
+                                    <div class="invisible border-c2 color-pere d-flex justify-content-center align-items-center text-center">
+                                        <div class="visible bg-c2 color-fils"></div>
+                                    </div>
+                                    <div class="invisible border-c3 color-pere d-flex justify-content-center align-items-center text-center">
+                                        <div class="visible bg-c3 color-fils"></div>
+                                    </div>
+                                    <div class="invisible border-c4 color-pere d-flex justify-content-center align-items-center text-center">
+                                        <div class="visible bg-c4 color-fils"></div>
+                                    </div>
+                                    <div class="invisible border-c5 color-pere d-flex justify-content-center align-items-center text-center">
+                                        <div class="visible bg-c5 color-fils"></div>
+                                    </div>
+                                    <div class="invisible border-c6 color-pere d-flex justify-content-center align-items-center text-center">
+                                        <div class="visible bg-c6 color-fils"></div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- operating system filter -->
+                            <article class="mb-5">
+                                <h3 class="font-tertiary text-tertiary fs-14 mb-3">operation system</h3>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="check1">
+                                    <label class="form-check-label font-secondary text-secondary fs-11" for="check1">
+                                        Android
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="check2">
+                                    <label class="form-check-label font-secondary text-secondary fs-11" for="check2">
+                                        iOS
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="check3">
+                                    <label class="form-check-label font-secondary text-secondary fs-11" for="check3">
+                                        Windows Phone
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="check4">
+                                    <label class="form-check-label font-secondary text-secondary fs-11" for="check4">
+                                        Symbian
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="check5">
+                                    <label class="form-check-label font-secondary text-secondary fs-11" for="check5">
+                                        BlackBerry OS
+                                    </label>
+                                </div>
+                            </article>
+
+                            <!-- popular tags -->
+                            <article>
+                                <h3 class="font-tertiary text-tertiary fs-14 mb-4">popular tags</h3>
+                                <div class="d-flex flex-wrap gap-2"> <!-- Flexbox parent with flex-wrap -->
+                                    <span class="font-tertiary text-secondary fs-10 bg-light p-2 px-3 rounded-pill">headphones</span>
+                                    <span class="font-tertiary text-secondary fs-10 bg-light p-2 px-3 rounded-pill">accessories</span>
+                                    <span class="font-tertiary text-secondary fs-10 bg-light p-2 px-3 rounded-pill">new</span>
+                                    <span class="font-tertiary text-secondary fs-10 bg-light p-2 px-3 rounded-pill">wireless</span>
+                                    <span class="font-tertiary text-secondary fs-10 bg-light p-2 px-3 rounded-pill">cables</span>
+                                    <span class="font-tertiary text-secondary fs-10 bg-light p-2 px-3 rounded-pill">devices</span>
+                                    <span class="font-tertiary text-secondary fs-10 bg-light p-2 px-3 rounded-pill">gadgets</span>
+                                    <span class="font-tertiary text-secondary fs-10 bg-light p-2 px-3 rounded-pill">brands</span>
+                                    <span class="font-tertiary text-secondary fs-10 bg-light p-2 px-3 rounded-pill">replacements</span>
+                                    <span class="font-tertiary text-secondary fs-10 bg-light p-2 px-3 rounded-pill">cases</span>
+                                </div>
+                            </article>
+                        </section>
+                    </aside>
+                    <!-- Hoofdgedeelte van de inhoud -->
+                    <section class="col-lg-9">
+                        <!-- Carrousel van producten of aanbiedingen -->
+                        <div class="row d-flex flex-column">
+                            <div id="carouselExampleCaptions" class="carousel slide rounded" data-bs-ride="carousel" data-bs-interval="3000">
+                                <!-- Navigatie-indicatoren van de carrousel (klikbare punten) -->
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                </div>
+                                <!-- Inhoud van de carrousel (afbeeldingen en beschrijvingen) -->
+                                <div class="carousel-inner text-uppercase">
+                                    <!-- Eerste item van de carrousel -->
+                                    <div class="carousel-item active position-relative">
+                                        <img src="./img/test1.jpg" class="d-block w-100 h-100" alt="cask" style="object-fit: cover;">
+                                        <div class="carousel-caption text-center position-absolute top-20 start-50 translate-middle-y">
+                                            <p class="font-secondary text-white fs-14">Don't Miss</p>
+                                            <p class="font-secondary text-quaternary fs-5">Tot 70% korting</p>
+                                            <p class="fw-bold font-primary text-white fs-18">Beste sportgadgets</p>
+                                            <a href="#" class="btn bg-green font-primary text-white fs-11 px-3 py-2 rounded-pill">Leer meer</a>
+                                        </div>
+                                    </div>
+                                    <!-- Tweede item van de carrousel -->
+                                    <div class="carousel-item active position-relative">
+                                        <img src="./img/test2.jpg" class="d-block w-100 h-100" alt="swatch" style="object-fit: cover;">
+                                        <div class="carousel-caption text-center position-absolute top-20 start-50 translate-middle-y">
+                                            <p class="font-secondary text-white fs-14">Don't Miss</p>
+                                            <p class="font-secondary text-quaternary fs-5">Tot 70% korting</p>
+                                            <p class="fw-bold font-primary text-white fs-18">Beste sportgadgets</p>
+                                            <a href="#" class="btn bg-green font-primary text-white fs-11 px-3 py-2 rounded-pill">Leer meer</a>
+                                        </div>
+                                    </div>
+                                    <!-- Derde item van de carrousel -->
+                                    <div class="carousel-item active position-relative">
+                                        <img src="./img/test3.webp" class="d-block w-100 h-100" alt="bottle" style="object-fit: cover;">
+                                        <div class="carousel-caption text-center position-absolute top-20 start-50 translate-middle-y">
+                                            <p class="font-secondary text-white fs-14">Don't Miss</p>
+                                            <p class="font-secondary text-quaternary fs-5">Tot 70% korting</p>
+                                            <p class="fw-bold font-primary text-white fs-18">Beste sportgadgets</p>
+                                            <a href="#" class="btn bg-green font-primary text-white fs-11 px-3 py-2 rounded-pill">Leer meer</a>
+                                        </div>
+                                    </div>
+                                    <!-- Vierde item van de carrousel -->
+                                    <div class="carousel-item active position-relative">
+                                        <img src="./img/test3.jpg" class="d-block w-100 h-100" alt="fitness" style="object-fit: cover;">
+                                        <div class="carousel-caption text-center position-absolute top-20 start-50 translate-middle-y">
+                                            <p class="font-secondary text-white fs-14">Don't Miss</p>
+                                            <p class="font-secondary text-quaternary fs-5">Tot 70% korting</p>
+                                            <p class="fw-bold font-primary text-white fs-18">Beste sportgadgets</p>
+                                            <a href="#" class="btn bg-green font-primary text-white fs-11 px-3 py-2 rounded-pill">Leer meer</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Navigatieknoppen van de carrousel (pijlen) -->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Vorige</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Volgende</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Filter voor kaarten -->
+                        <div class="row text-uppercase mt-5">
+                            <!-- Titel en weergave van het aantal resultaten -->
+                            <div class="col-12 col-lg-4 d-lg-flex justify-content-lg-between align-items-center pe-lg-2">
+                                <h2 class="font-tertiary text-tertiary fs-18">Sport gadgets</h2>
+                                <p><span class="font-primary text-secondary fs-11">weergave van</span> <span class="font-secondary text-secondary fs-11 px-1">15</span><span class="font-primary text-secondary fs-11">van</span><span class="font-secondary text-secondary fs-11 px-1">2358</span><span class="font-primary text-secondary fs-11">resultaten</span></p>
+                            </div>
+                            <!-- Layout voor de filters: weergave en sorteermogelijkheden -->
+                            <div class="col-12 col-lg-8 d-lg-flex justify-content-lg-between align-items-center ">
+                                <div class="d-flex justify-content-lg-between mb-2 mb-lg-0">
+                                    <!-- Rasterweergave icoon -->
+                                    <div class="me-1 bg-green border fs-10 text-white rounded d-flex justify-content-center align-items-center" style="padding: 12px 15px">
+                                        <i class="bi bi-grid-3x3-gap-fill"></i>
+                                    </div>
+                                    <!-- Lijstweergave icoon -->
+                                    <div class="border fs-10 text-secondary rounded d-flex justify-content-center align-items-center" style="padding: 12px 15px">
+                                        <i class="bi bi-list-task"></i>
+                                    </div>
+                                </div>
+                                <!-- Keuze voor het meest populaire product -->
+                                <div class="mb-2 mb-lg-0">
+                                    <select class="form-select text-uppercase font-secondary text-secondary fs-10 rounded-pill py-0" style="height: 40px" aria-label="Default select example">
+                                        <option selected>meest populaire product</option>
+                                        <option value="1">Een</option>
+                                        <option value="2">Twee</option>
+                                        <option value="3">Drie</option>
+                                    </select>
+                                </div>
+
+                                <!-- Keuze voor het aantal weergaven (show 30) -->
+                                <div class="mb-2 mb-lg-0">
+                                    <select class="form-select text-uppercase font-secondary text-secondary fs-10 rounded-pill" style="height: 40px" aria-label="Default select example">
+                                        <option selected>toon 30</option>
+                                        <option value="1">Een</option>
+                                        <option value="2">Twee</option>
+                                        <option value="3">Drie</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Kaarten (producten) -->
+                        <div id="cards" class="row mt-5">
+                            <!-- Product 1 -->
+                            <div class="col-12 col-lg-4 mb-4">
+                                <article class="card border-0 w-100">
+                                    <!-- Categorie van het product -->
+                                    <h3 class="text-uppercase font-secondary text-quaternary fs-11">accessoires</h3>
+                                    <!-- Naam van het product -->
+                                    <h4 class="text-uppercase font-primary text-tertiary fs-13">Golfsense</h4>
+                                    <!-- Afbeelding van het product -->
+                                    <img src="./img/golfsense.png" class="my-4 mx-auto" alt="Golfsense">
+                                    <!-- Prijs van het product -->
+                                    <p class="font-secondary text-tertiary fs-16">$ 129.00</p>
+                                    <!-- Korte beschrijving van het product -->
+                                    <p class="font-secondary text-secondary fs-13 m-0">Mollis nec consequat at in feugiat mole stie tortor a malusuada</p>
+                                </article>
+                            </div>
+
+                            <!-- Product 2 -->
+                            <div class="col-12 col-lg-4 border border-top-0 border-bottom-0 mb-4">
+                                <article class="card border-0 w-100">
+                                    <!-- Categorie van het product -->
+                                    <h3 class="text-uppercase font-secondary text-quaternary fs-11">smartwatches</h3>
+                                    <!-- Naam van het product -->
+                                    <h4 class="text-uppercase font-primary text-tertiary fs-13">Watch 42mm Smartwatch</h4>
+                                    <!-- Afbeelding van het product -->
+                                    <img src="./img/watch.png" class="my-4 mx-auto" alt="Watch 42mm Smartwatch">
+                                    <!-- Prijs van het product -->
+                                    <p class="font-secondary text-tertiary fs-16">$ 225.00</p>
+                                    <!-- Korte beschrijving van het product -->
+                                    <p class="font-secondary text-secondary fs-13 m-0">Mollis nec consequat at in feugiat mole stie tortor a malusuada</p>
+                                </article>
+                            </div>
+
+                            <!-- Product 3 -->
+                            <div class="col-12 col-lg-4 mb-4">
+                                <article class="card border-0 w-100">
+                                    <!-- Categorie van het product -->
+                                    <h3 class="text-uppercase font-secondary text-quaternary fs-11">headphones</h3>
+                                    <!-- Naam van het product -->
+                                    <h4 class="text-uppercase font-primary text-tertiary fs-13">fitness headphones inspire</h4>
+                                    <!-- Afbeelding van het product -->
+                                    <img src="./img/inspire.png" class="my-4 mx-auto" alt="fitness headphones inspire">
+                                    <!-- Prijs van het product -->
+                                    <p class="font-secondary text-tertiary fs-16">$ 110.00</p>
+                                    <!-- Korte beschrijving van het product -->
+                                    <p class="font-secondary text-secondary fs-13 m-0">Mollis nec consequat at in feugiat mole stie tortor a malusuada</p>
+                                </article>
+                            </div>
+
+                            <!-- Product 4 -->
+                            <div class="col-12 col-lg-4 mb-4">
+                                <article class="card border-0 w-100">
+                                    <!-- Categorie van het product -->
+                                    <h3 class="text-uppercase font-secondary text-quaternary fs-11">headphones</h3>
+                                    <!-- Naam van het product -->
+                                    <h4 class="text-uppercase font-primary text-tertiary fs-13">fitness headphones sense</h4>
+                                    <!-- Afbeelding van het product -->
+                                    <img src="./img/sense.png" class="my-4 mx-auto" alt="fitness headphones sense">
+                                    <!-- Prijs van het product -->
+                                    <p class="font-secondary text-tertiary fs-16">$ 115.00</p>
+                                    <!-- Korte beschrijving van het product -->
+                                    <p class="font-secondary text-secondary fs-13 m-0">Mollis nec consequat at in feugiat mole stie tortor a malusuada</p>
+                                </article>
+                            </div>
+
+                            <!-- Product 5 -->
+                            <div class="col-12 col-lg-4 border border-top-0 border-bottom-0 mb-4">
+                                <article class="card border-0 w-100">
+                                    <!-- Categorie van het product -->
+                                    <h3 class="text-uppercase font-secondary text-quaternary fs-11">accessoires</h3>
+                                    <!-- Naam van het product -->
+                                    <h4 class="text-uppercase font-primary text-tertiary fs-13">Groove Water Bottle</h4>
+                                    <!-- Afbeelding van het product -->
+                                    <img src="./img/bottle.png" class="my-4 mx-auto" alt="Groove Water Bottle">
+                                    <!-- Prijs van het product -->
+                                    <p class="font-secondary text-tertiary fs-16">$ 45.00</p>
+                                    <!-- Korte beschrijving van het product -->
+                                    <p class="font-secondary text-secondary fs-13 m-0">Mollis nec consequat at in feugiat mole stie tortor a malusuada</p>
+                                </article>
+                            </div>
+
+                            <!-- Product 6 -->
+                            <div class="col-12 col-lg-4 mb-4">
+                                <article class="card border-0 w-100">
+                                    <!-- Categorie van het product -->
+                                    <h3 class="text-uppercase font-secondary text-quaternary fs-11">fitness tracker</h3>
+                                    <!-- Naam van het product -->
+                                    <h4 class="text-uppercase font-primary text-tertiary fs-13">flex fitness tracker</h4>
+                                    <!-- Afbeelding van het product -->
+                                    <img src="./img/tracker.png" class="my-4 mx-auto" alt="flex fitness tracker">
+                                    <!-- Prijs van het product -->
+                                    <p class="font-secondary text-tertiary fs-16">$ 55.00</p>
+                                    <!-- Korte beschrijving van het product -->
+                                    <p class="font-secondary text-secondary fs-13 m-0">Mollis nec consequat at in feugiat mole stie tortor a malusuada</p>
+                                </article>
+                            </div>
+
+                            <!-- Product 7 -->
+                            <div class="col-12 col-lg-4 mb-4">
+                                <article class="card border-0 w-100">
+                                    <!-- Categorie van het product -->
+                                    <h3 class="text-uppercase font-secondary text-quaternary fs-11">fitness tracker</h3>
+                                    <!-- Naam van het product -->
+                                    <h4 class="text-uppercase font-primary text-tertiary fs-13">tracker moov x</h4>
+                                    <!-- Afbeelding van het product -->
+                                    <img src="./img/moovx.png" class="my-4 mx-auto" alt="tracker moov x">
+                                    <!-- Prijs van het product -->
+                                    <p class="font-secondary text-tertiary fs-16">$ 63.00</p>
+                                    <!-- Korte beschrijving van het product -->
+                                    <p class="font-secondary text-secondary fs-13 m-0">Mollis nec consequat at in feugiat mole stie tortor a malusuada</p>
+                                </article>
+                            </div>
+
+                            <!-- Product 8 -->
+                            <div class="col-12 col-lg-4 border border-top-0 border-bottom-0 mb-4">
+                                <article class="card border-0 w-100">
+                                    <!-- Categorie van het product -->
+                                    <h3 class="text-uppercase font-secondary text-quaternary fs-11">headphones</h3>
+                                    <!-- Naam van het product -->
+                                    <h4 class="text-uppercase font-primary text-tertiary fs-13">fitness headphones</h4>
+                                    <!-- Afbeelding van het product -->
+                                    <img src="./img/headphones.png" class="my-4 mx-auto" alt="fitness headphones">
+                                    <!-- Prijs van het product -->
+                                    <p class="font-secondary text-tertiary fs-16">$ 95.00</p>
+                                    <!-- Korte beschrijving van het product -->
+                                    <p class="font-secondary text-secondary fs-13 m-0">Mollis nec consequat at in feugiat mole stie tortor a malusuada</p>
+                                </article>
+                            </div>
+
+                            <!-- Product 9 -->
+                            <div class="col-12 col-lg-4 mb-4">
+                                <article class="card border-0 w-100">
+                                    <!-- Categorie van het product -->
+                                    <h3 class="text-uppercase font-secondary text-quaternary fs-11">accessoires</h3>
+                                    <!-- Naam van het product -->
+                                    <h4 class="text-uppercase font-primary text-tertiary fs-13">Smart Bracelet</h4>
+                                    <!-- Afbeelding van het product -->
+                                    <img src="./img/smartbracelet.png" class="my-4 mx-auto" alt="Smart Bracelet">
+                                    <!-- Prijs van het product -->
+                                    <p class="font-secondary text-tertiary fs-16">$ 74.00</p>
+                                    <!-- Korte beschrijving van het product -->
+                                    <p class="font-secondary text-secondary fs-13 m-0">Mollis nec consequat at in feugiat mole stie tortor a malusuada</p>
+                                </article>
+                            </div>
+                        </div>
+
+                        <!-- Paginatie sectie -->
+                        <div class="row text-uppercase mt-5">
+                            <div class="col-12 d-flex justify-content-between align-items-center">
+                                <!-- Vorige pagina knop -->
+                                <div class="">
+                                    <a href="#" class="pagination-button btn rounded-pill border bg-transparent font-tertiary text-secondary fs-11 px-4 py-2">
+                                        vorige pagina
+                                    </a>
+                                </div>
+
+                                <!-- Paginanummers weergave -->
+                                <div class="d-flex justify-content-between align-items-center text-center">
+                                    <!-- Huidige pagina -->
+                                    <div class="page me-2 border bg-green font-secondary fs-11 text-white rounded d-flex justify-content-center align-items-center">
+                                        1
+                                    </div>
+                                    <!-- Andere pagina's -->
+                                    <div class="page me-2 border font-secondary fs-11 text-secondary rounded d-flex justify-content-center align-items-center">
+                                        2
+                                    </div>
+                                    <div class="page me-2 border font-secondary fs-11 text-secondary rounded d-flex justify-content-center align-items-center">
+                                        3
+                                    </div>
+                                    <!-- Dots om aan te geven dat er meer pagina's zijn -->
+                                    <p class="me-2">...</p>
+                                    <!-- Laatste pagina -->
+                                    <div class="page me-1 border font-secondary fs-11 text-secondary rounded d-flex justify-content-center align-items-center">
+                                        23
+                                    </div>
+                                </div>
+                                <!-- Volgende pagina knop -->
+                                <div class="">
+                                    <a href="#" class="pagination-button btn rounded-pill border bg-transparent font-tertiary text-secondary fs-11 px-4 py-2">
+                                        volgende pagina
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Trends Sectie -->
+    <div class="container-fluid mt-7">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="row">
+                    <!-- Sectie 1: Hot Sale -->
+                    <div class="col-12 col-lg-3 mb-5 mb-lg-0">
+                        <section class="row text-uppercase d-flex flex-column gap-4">
+                            <h2 class="font-primary text-tertiary fs-18 mb-3">Hot Sale</h2>
+
+                            <!-- Artikel 1 -->
+                            <article class="d-flex align-items-center gap-3">
+                                <div class="border rounded product-image d-flex justify-content-center align-items-center text-center" style="width: 80px; height: 80px;">
+                                    <img src="./img/product1.png" alt="product1" class="img-fluid">
+                                </div>
+                                <div class="info">
+                                    <h3 class="font-secondary text-quaternary fs-11">Wireless</h3>
+                                    <h4 class="font-tertiary text-tertiary fs-11">Wireless Headphones</h4>
+                                    <p class="font-secondary text-tertiary fs-12 mb-0">$98.00</p>
+                                </div>
+                            </article>
+
+                            <!-- Artikel 2 -->
+                            <article class="d-flex align-items-center gap-3">
+                                <div class="border rounded product-image d-flex justify-content-center align-items-center text-center" style="width: 80px; height: 80px;">
+                                    <img src="./img/product2.png" alt="product2" class="img-fluid">
+                                </div>
+                                <div class="info">
+                                    <h3 class="font-secondary text-quaternary fs-11">Cases</h3>
+                                    <h4 class="font-tertiary text-tertiary fs-11">Wireless Headphones</h4>
+                                    <p class="font-secondary text-tertiary fs-12 mb-0">$98.00</p>
+                                </div>
+                            </article>
+
+                            <!-- Artikel 3 -->
+                            <article class="d-flex align-items-center gap-3">
+                                <div class="border rounded product-image d-flex justify-content-center align-items-center text-center" style="width: 80px; height: 80px;">
+                                    <img src="./img/product3.png" alt="product3" class="img-fluid">
+                                </div>
+                                <div class="info">
+                                    <h3 class="font-secondary text-quaternary fs-11">Cases</h3>
+                                    <h4 class="font-tertiary text-tertiary fs-11">Wireless Headphones</h4>
+                                    <p class="mb-0">
+                                        <span class="font-secondary text-tertiary fs-12 me-2">$98.00</span>
+                                        <span class="font-secondary text-secondary fs-12 text-decoration-line-through">$32.00</span>
+                                    </p>
+                                </div>
+                            </article>
+                        </section>
+                    </div>
+
+                    <!-- Sectie 2: Top Rated -->
+                    <div class="col-12 col-lg-3 mb-5 mb-lg-0">
+                        <section class="row text-uppercase d-flex flex-column gap-4">
+                            <h2 class="font-primary text-tertiary fs-18 mb-3">top rated</h2>
+
+                            <!-- Artikel 1 -->
+                            <article class="d-flex align-items-center gap-3">
+                                <div class="border rounded product-image d-flex justify-content-center align-items-center text-center" style="width: 80px; height: 80px;">
+                                    <img src="./img/product4.png" alt="product4" class="img-fluid">
+                                </div>
+                                <div class="info">
+                                    <h3 class="font-secondary text-quaternary fs-11">Wireless</h3>
+                                    <h4 class="font-tertiary text-tertiary fs-11">Wireless Headphones</h4>
+                                    <p class="font-secondary text-tertiary fs-12 mb-0">$410.00</p>
+                                </div>
+                            </article>
+
+                            <!-- Artikel 2 -->
+                            <article class="d-flex align-items-center gap-3">
+                                <div class="border rounded product-image d-flex justify-content-center align-items-center text-center" style="width: 80px; height: 80px;">
+                                    <img src="./img/product5.png" alt="product5" class="img-fluid">
+                                </div>
+                                <div class="info">
+                                    <h3 class="font-secondary text-quaternary fs-11">Cases</h3>
+                                    <h4 class="font-tertiary text-tertiary fs-11">Wireless Headphones</h4>
+                                    <p class="font-secondary text-tertiary fs-12 mb-0">$98.00</p>
+                                </div>
+                            </article>
+
+                            <!-- Artikel 3 -->
+                            <article class="d-flex align-items-center gap-3">
+                                <div class="border rounded product-image d-flex justify-content-center align-items-center text-center" style="width: 80px; height: 80px;">
+                                    <img src="./img/product6.png" alt="product6" class="img-fluid">
+                                </div>
+                                <div class="info">
+                                    <h3 class="font-secondary text-quaternary fs-11">Cases</h3>
+                                    <h4 class="font-tertiary text-tertiary fs-11">Wireless Headphones</h4>
+                                    <p class="mb-0">
+                                        <span class="font-secondary text-tertiary fs-12 me-2">$98.00</span>
+                                        <span class="font-secondary text-secondary fs-12 text-decoration-line-through">$32.00</span>
+                                    </p>
+                                </div>
+                            </article>
+                        </section>
+                    </div>
+
+                    <!-- Sectie 3: Popular -->
+                    <div class="col-12 col-lg-3 mb-5 mb-lg-0">
+                        <section class="row text-uppercase d-flex flex-column gap-4">
+                            <h2 class="font-primary text-tertiary fs-18 mb-3">popular</h2>
+
+                            <!-- Artikel 7 -->
+                            <article class="d-flex align-items-center gap-3">
+                                <div class="border rounded product-image d-flex justify-content-center align-items-center text-center" style="width: 80px; height: 80px;">
+                                    <img src="./img/product7.png" alt="product7" class="img-fluid">
+                                </div>
+                                <div class="info">
+                                    <h3 class="font-secondary text-quaternary fs-11">Wireless</h3>
+                                    <h4 class="font-tertiary text-tertiary fs-11">Wireless Headphones</h4>
+                                    <p class="font-secondary text-tertiary fs-12 mb-0">$98.00</p>
+                                </div>
+                            </article>
+
+                            <!-- Artikel 8 -->
+                            <article class="d-flex align-items-center gap-3">
+                                <div class="border rounded product-image d-flex justify-content-center align-items-center text-center" style="width: 80px; height: 80px;">
+                                    <img src="./img/product8.png" alt="product8" class="img-fluid">
+                                </div>
+                                <div class="info">
+                                    <h3 class="font-secondary text-quaternary fs-11">Cases</h3>
+                                    <h4 class="font-tertiary text-tertiary fs-11">Wireless Headphones</h4>
+                                    <p class="font-secondary text-tertiary fs-12 mb-0">$98.00</p>
+                                </div>
+                            </article>
+
+                            <!-- Artikel 9 -->
+                            <article class="d-flex align-items-center gap-3">
+                                <div class="border rounded product-image d-flex justify-content-center align-items-center text-center" style="width: 80px; height: 80px;">
+                                    <img src="./img/product9.png" alt="product9" class="img-fluid">
+                                </div>
+                                <div class="info">
+                                    <h3 class="font-secondary text-quaternary fs-11">Cases</h3>
+                                    <h4 class="font-tertiary text-tertiary fs-11">Wireless Headphones</h4>
+                                    <p class="mb-0">
+                                        <span class="font-secondary text-tertiary fs-12 me-2">$98.00</span>
+                                        <span class="font-secondary text-secondary fs-12 text-decoration-line-through">$32.00</span>
+                                    </p>
+                                </div>
+                            </article>
+                        </section>
+                    </div>
+
+                    <!-- Sectie 4: Best Choice -->
+                    <div class="col-12 col-lg-3 mb-5 mb-lg-0">
+                        <section class="row text-uppercase d-flex flex-column gap-4">
+                            <h2 class="font-primary text-tertiary fs-18 mb-3">best choice</h2>
+
+                            <!-- Artikel 7 -->
+                            <article class="d-flex align-items-center gap-3">
+                                <div class="border rounded product-image d-flex justify-content-center align-items-center text-center" style="width: 80px; height: 80px;">
+                                    <img src="./img/product10.png" alt="product10" class="img-fluid">
+                                </div>
+                                <div class="info">
+                                    <h3 class="font-secondary text-quaternary fs-11">Wireless</h3>
+                                    <h4 class="font-tertiary text-tertiary fs-11">Wireless Headphones</h4>
+                                    <p class="font-secondary text-tertiary fs-12 mb-0">$98.00</p>
+                                </div>
+                            </article>
+
+                            <!-- Artikel 8 -->
+                            <article class="d-flex align-items-center gap-3">
+                                <div class="border rounded product-image d-flex justify-content-center align-items-center text-center" style="width: 80px; height: 80px;">
+                                    <img src="./img/product11.png" alt="product11" class="img-fluid">
+                                </div>
+                                <div class="info">
+                                    <h3 class="font-secondary text-quaternary fs-11">Cases</h3>
+                                    <h4 class="font-tertiary text-tertiary fs-11">Wireless Headphones</h4>
+                                    <p class="font-secondary text-tertiary fs-12 mb-0">$98.00</p>
+                                </div>
+                            </article>
+
+                            <!-- Artikel 9 -->
+                            <article class="d-flex align-items-center gap-3">
+                                <div class="border rounded product-image d-flex justify-content-center align-items-center text-center" style="width: 80px; height: 80px;">
+                                    <img src="./img/product12.png" alt="product12" class="img-fluid">
+                                </div>
+                                <div class="info">
+                                    <h3 class="font-secondary text-quaternary fs-11">Cases</h3>
+                                    <h4 class="font-tertiary text-tertiary fs-11">Wireless Headphones</h4>
+                                    <p class="mb-0">
+                                        <span class="font-secondary text-tertiary fs-12 me-2">$98.00</span>
+                                        <span class="font-secondary text-secondary fs-12 text-decoration-line-through">$32.00</span>
+                                    </p>
+                                </div>
+                            </article>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mt-7">
+        <!-- Hoofdsectie met groene achtergrond -->
+        <div class="row py-5 bg-green">
+            <div class="col-lg-8 offset-lg-2">
+                <section>
+                    <div class="row">
+                        <div class="d-flex flex-column flex-lg-row text-center justify-content-center justify-content-lg-between align-items-center">
+                            <!-- Titel en korte beschrijving -->
+                            <h2 class="text-uppercase font-tertiary text-white fs-5 mb-3 mb-lg-0">dont miss your chance</h2>
+                            <p class="text-uppercase font-secondary text-white fs-14 mb-3 mb-lg-0">only 200 promo code on discount</p>
+                            <!-- Nieuwsbrief formulier -->
+                            <div id="newsletterform" class="text-center">
+                                <form class="newsletterform border border-white d-flex rounded-pill position-relative" style="width: 300px" action="#" method="POST">
+                                    <!-- E-mail invoerveld -->
+                                    <input type="email" placeholder="Enter your e-mail" class="border-0 rounded-pill w-100 text-white px-4 emailinput f-5 font-secondary no-outline bg-transparent" style="height: 50px" required>
+                                    <!-- Verzenden knop -->
+                                    <button type="submit" class="btn button submitbtn border-0 rounded-pill font-secondary f-4 color-primary bg-white position-absolute top-50 end-0 translate-middle-y font-tertiary text-secondary fs-11 text-uppercase px-4" style="height: 50px">submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="container-fluid">
+        <div class="row pt-5 bg-dark">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="row mb-3 text-uppercase">
+                    <!-- Eerste kolom met contactinformatie -->
+                    <div class="col-12 col-lg-3 mb-5 mb-lg-0">
+                        <a class="border border-3 border-white px-2 py-1 mb-3 font-tertiary text-white d-flex justify-content-center align-items-center text-decoration-none" href="#" style="letter-spacing: 3px; width: 50px;">
+                            <span class="fs-16 text-center">ex<br>zo</span>
+                        </a>
+                        <p class="font-secondary text-secondary fs-13 mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit adipisicing elit.</p>
+                        <div>
+                            <p>
+                                <i class="bi bi-phone text-quaternary"></i>
+                                <a href="tel:+3(523)5551238745" class="text-decoration-none text-white">
+                                    <span class="me-1 font-primary text-secondary fs-10">contact us:</span>
+                                    <span class="font-secondary text-secondary fs-10">+3(523)5551238745</span>
+                                </a>
+                            </p>
+                            <p>
+                                <i class="bi bi-envelope text-quaternary"></i>
+                                <a href="mailto:+3(523)5551238745" class="text-decoration-none text-white">
+                                    <span class="me-1 font-primary text-secondary fs-10">email:</span>
+                                    <span class="font-secondary text-secondary fs-10">office@exzo.com</span>
+                                </a>
+                            </p>
+                            <p class="mb-0">
+                                <i class="bi bi-geo-alt text-quaternary"></i>
+                                <span class="me-1 font-primary text-secondary fs-10">adres:</span>
+                                <span class="font-secondary text-secondary fs-10">1st, newyork, usa</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Tweede kolom met snelle links -->
+                    <div class="col-12 col-lg-3 mb-4 mb-lg-0">
+                        <h2 class="font-tertiary text-white fs-13 mb-3">quick links</h2>
+                        <div class="row row-gap-2">
+                            <div class="col-6">
+                                <a href="#" class="font-secondary text-secondary fs-11 text-decoration-none">home</a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="font-secondary text-secondary fs-11 text-decoration-none">privacy policy</a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="font-secondary text-secondary fs-11 text-decoration-none">about us</a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="font-secondary text-secondary fs-11 text-decoration-none">warranty</a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="font-secondary text-secondary fs-11 text-decoration-none">products</a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="font-secondary text-secondary fs-11 text-decoration-none">login</a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="font-secondary text-secondary fs-11 text-decoration-none">services</a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="font-secondary text-secondary fs-11 text-decoration-none">registration</a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="font-secondary text-secondary fs-11 text-decoration-none">blog</a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="font-secondary text-secondary fs-11 text-decoration-none">delivery</a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="font-secondary text-secondary fs-11 text-decoration-none">gallery</a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="font-secondary text-secondary fs-11 text-decoration-none">pages</a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="font-secondary text-secondary fs-11 text-decoration-none">contact</a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="font-secondary text-secondary fs-11 text-decoration-none">our stores</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Derde kolom met recente berichten -->
+                    <div class="col-12 col-lg-3 mb-4 mb-lg-0">
+                        <div class="row row-gap-3">
+                            <h2 class="font-tertiary text-white fs-13">some posts</h2>
+                            <div class="col-12 d-flex">
+                                <!-- Vierkantje met vaste grootte -->
+                                <div class="rounded bg-gray" style="width: 60px; height: 60px; flex-shrink: 0;"></div>
+                                <!-- Tekstinhoud naast het vierkantje -->
+                                <div class="ms-3">
+                                    <p class="font-secondary text-primary fs-10 mb-0">APR 07/15</p>
+                                    <p class="font-primary text-secondary fs-11 mb-0">Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex">
+                                <!-- Vierkantje met vaste grootte -->
+                                <div class="rounded bg-gray" style="width: 60px; height: 60px; flex-shrink: 0;"></div>
+                                <!-- Tekstinhoud naast het vierkantje -->
+                                <div class="ms-3">
+                                    <p class="font-secondary text-primary fs-10 mb-0">APR 07/15</p>
+                                    <p class="font-primary text-secondary fs-11 mb-0">Lorem ipsum dolor sit amet.</p>
+                                </div>
+
+                            </div>
+                            <div class="col-12 d-flex">
+                                <!-- Vierkantje met vaste grootte -->
+                                <div class="rounded bg-gray" style="width: 60px; height: 60px; flex-shrink: 0;"></div>
+                                <!-- Tekstinhoud naast het vierkantje -->
+                                <div class="ms-3">
+                                    <p class="font-secondary text-primary fs-10 mb-0">APR 07/15</p>
+                                    <p class="font-primary text-secondary fs-11 mb-0">Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vierde kolom met populaire tags -->
+                    <div class="col-12 col-lg-3 mb-4">
+                        <div class="row d-flex">
+                            <h2 class="font-tertiary text-white fs-13 mb-3 mb-lg-2">popular tags</h2>
+                            <div class="d-flex flex-wrap gap-2"> <!-- Flexbox parent met flex-wrap -->
+                                <span class="font-tertiary text-secondary fs-10 bg-gray2 p-2 px-3 rounded-pill">headphones</span>
+                                <span class="font-tertiary text-secondary fs-10 bg-gray2 p-2 px-3 rounded-pill">accessories</span>
+                                <span class="font-tertiary text-secondary fs-10 bg-gray2 p-2 px-3 rounded-pill">new</span>
+                                <span class="font-tertiary text-secondary fs-10 bg-gray2 p-2 px-3 rounded-pill">wireless</span>
+                                <span class="font-tertiary text-secondary fs-10 bg-gray2 p-2 px-3 rounded-pill">cabels</span>
+                                <span class="font-tertiary text-secondary fs-10 bg-gray2 p-2 px-3 rounded-pill">devices</span>
+                                <span class="font-tertiary text-secondary fs-10 bg-gray2 p-2 px-3 rounded-pill">gadgets</span>
+                                <span class="font-tertiary text-secondary fs-10 bg-gray2 p-2 px-3 rounded-pill">brands</span>
+                                <span class="font-tertiary text-secondary fs-10 bg-gray2 p-2 px-3 rounded-pill">replacements</span>
+                                <span class="font-tertiary text-secondary fs-10 bg-gray2 p-2 px-3 rounded-pill">replacements</span>
+                                <span class="font-tertiary text-secondary fs-10 bg-gray2 p-2 px-3 rounded-pill">cases</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Voettekst met copyright en social media iconen -->
+                <div class="row mt-0 border  border-bottom-0 border-start-0 border-end-0 border-tertiary py-4">
+                    <div class="col-12 col-lg-4 d-flex justify-content-center justify-content-lg-start align-items-center mb-3 mb-lg-0">
+                        <div>
+                            <p class="m-0"><span class="font-secondary text-secondary fs-13 me-2">© 2015 Alle rechten voorbehouden. Ontwikkeld door</span><span class="font-secondary text-quaternary fs-13">UnlonAgency</span></p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 d-flex justify-content-center align-items-center gap-2 mb-3 mb-lg-0">
+                        <a href="">
+                            <div class="icon position-relative bg-gray2">
+                                <img class="position-absolute top-50 start-50 translate-middle" src="./img/facebook.png" alt="facebook">
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="icon position-relative bg-gray2">
+                                <img class="position-absolute top-50 start-50 translate-middle" src="./img/twitte.png" alt="twitter">
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="icon position-relative bg-gray2">
+                                <img class="position-absolute top-50 start-50 translate-middle" src="./img/linkedin.png" alt="linkedin">
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="icon position-relative bg-gray2">
+                                <img class="position-absolute top-50 start-50 translate-middle" src="./img/g+.png" alt="google+">
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="icon position-relative bg-gray2">
+                                <img class="position-absolute top-50 start-50 translate-middle" src="./img/pinterest.png" alt="printrest">
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Betalingsicons -->
+                    <div class="col-12 col-lg-4 d-flex justify-content-center justify-content-lg-end align-items-center gap-2">
+                        <img class = "payement" src="./img/peyment1.png" alt="skrill">
+                        <img class = "payement" src="./img/peyment2.png" alt="bitcoin">
+                        <img class = "payement" src="./img/peyment3.png" alt="amerbon">
+                        <img class = "payement" src="./img/peyment4.png" alt="paypal">
+                        <img class = "payement" src="./img/peyment5.png" alt="mastercard">
+                        <img class = "payement" src="./img/peyment6.png" alt="visa">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
